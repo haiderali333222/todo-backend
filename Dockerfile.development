@@ -1,0 +1,11 @@
+FROM node:latest
+RUN npm install -g npm@8.1.1 
+ENV PATH /var/www/html/epeServer/node_modules/.bin:$PATH
+WORKDIR /app
+COPY package.json ./
+RUN yarn 
+# RUN yarn add   http-errors
+RUN npm i -g nodemon
+COPY . .
+EXPOSE 8080
+CMD ["yarn","dev"]
