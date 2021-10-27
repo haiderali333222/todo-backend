@@ -39,7 +39,7 @@ async function saveTodos(req, res) {
     await todos.save().then(() => {
 
         console.log('user is saved');
-        res.send('saved')
+        res.status(200).send('saved')
 
 
     }).catch((err) => {

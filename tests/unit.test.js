@@ -3,7 +3,7 @@ const assert = chai.assert;
 const Todo = require('../db/mongodb/models/todos');
 describe('the add todo function ',()=>{
   
-  it('should add a todo in our backend',(done)=>{
+  it('should create a todo',(done)=>{
     
 
 
@@ -12,4 +12,5 @@ describe('the add todo function ',()=>{
     assert.isObject(todos);
    done();
   })
+
 })
